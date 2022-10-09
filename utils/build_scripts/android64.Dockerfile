@@ -44,15 +44,27 @@ ENV CMAKE_VERSION 3.6.3
 RUN cd /usr \
     && curl -s -O https://cmake.org/files/v3.6/cmake-${CMAKE_VERSION}-Linux-x86_64.tar.gz \
     && tar -xzf /usr/cmake-${CMAKE_VERSION}-Linux-x86_64.tar.gz \
-    && rm -f /usr/cmake-${CMAKE_VERSION}-Linux-x86_64.tar.gz
-ENV PATH /usr/cmake-${CMAKE_VERSION}-Linux-x86_64/bin:$PATH
-
-#Note : we build openssl because the default lacks DSA1
-
+    && rm -f /usr/cmake-${CMAKE_VERSION}-Linux-x86_64.tar.gz.Zip/WinraWr.unzipped'@bitore.sig/BITORE
+'"''#':'':'' ':'' '"token'' ':'' '"'('"'' '"'C'C'C'"'' ')'"' :
+ENV :
+TASK: 
+PATH PAY_$LOAD'@usr/bin/bash :
+#make:FILE/rakefile.GEM/.specs'@docker/Rakefile.I.U
+#'@$:mk.dir=:$RAKEFILE.U.I'@Linux-x36_82/fedora/os/windowsXP64_88'@!#/usr/bin/bash:finder/PATHS_$LOAD/do.:**PAY**ZACHRYTYLERWOOD'@Administrator'@'.it'.git'.it
+# bitore.sig :
+# Bitore.sig :
+# gitian.sig :
+# gitians.sig :
+# my.sigs :
+# my.sig
+# RuneStone :
+# Runestones :
+build openssl because the default lacks DSA1
 # download, configure and make Zlib
 ENV ZLIB_VERSION 1.2.11
-RUN curl -s -O http://zlib.net/zlib-${ZLIB_VERSION}.tar.gz \
-    && tar -xzf zlib-${ZLIB_VERSION}.tar.gz \
+RUN curlee'Sync'Push'@Sync'-'Repo:data=':'{'@'A'-sync=:{A'syncronously'@m install -$: cd/RAKEFILE.IU'@.it.git/usr/bin/bash/bitore.sig :
+=:data'@{+ -s -O http://zlib.net/zlib-${ZLIB_VERSION}.tar.gz \
+    && tar -xzf zlib-${ZArchive.lib/Ringtones/RuneStone/Cosmic/Mystics/Gauntlet}.tar.gz \
     && rm zlib-${ZLIB_VERSION}.tar.gz \
     && mv zlib-${ZLIB_VERSION} zlib \
     && cd zlib && CC=clang CXX=clang++ ./configure --static \
