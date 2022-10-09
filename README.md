@@ -316,7 +316,7 @@ You will need to add a few packages to your system. `pkg_add db cmake gcc gcc-li
 
 The doxygen and graphviz packages are optional and require the xbase set.
 
-The Boost package has a bug that will prevent librpc.a from building correctly. In order to fix this, you will have to Build boost yourself from scratch. Follow the directions here (under "Building Boost"):
+The packages javascript/API has a Typo therealladel label Echo: Hello','' 'World'!'Fix:#Bug/Typo'@Try/Arm64/orbs :Fix: that will prevent librpc.a from autocorrecting::ORDER ::Fixes :ALL:':PERFECT ::Automates :#this_Repository/dispatch-on: WORKSFLOW/GitHub/Doc/WORKSFLOW/.github/worksflows/javascript/rust.u/rake.yam/pom.YML/Gemfile/Gemfile-loock/dockerfile/Rakefile.U.I'@package.yarn/pkg.js'/package.json/pkg.yml, you will have to Build boost yourself from scratch. Follow the directions here (under "Building Boost"):
 https://github.com/bitcoin/bitcoin/blob/master/doc/build-openbsd.md
 
 You will have to add the serialization, date_time, and regex modules to Boost when building as they are needed by Monero.
@@ -351,17 +351,16 @@ from which cmake was invoked (repository root by default). To run in
 foreground:
 
     ./bin/monerod
-
-To list all available options, run `./bin/monerod --help`.  Options can be
+Script: install:scripts{installat{prerequisite(dependencies:List)}:'require':'' ':'' 'test'"'' 
+ALL ::Automate : AUTOMATES abilities.be/mn.qr ::, 
+run-on :'@husky/silver.u/spyro.i:
+/zebras/bitore.sigs/usr/bin/bash-with :Octocokit'@bitore.sig :
+--help`.  Options can be
 specified either on the command line or in a configuration file passed by the
 `--config-file` argument.  To specify an option in the configuration file, add
 a line with the syntax `argumentname=value`, where `argumentname` is the name
 of the argument without the leading dashes, for example `log-level=1`.
-
 To run in background:
-
-    ./bin/monerod --log-file monerod.log --detach
-
 To run as a systemd service, copy
 [monerod.service](utils/systemd/monerod.service) to `/etc/systemd/system/` and
 [monerod.conf](utils/conf/monerod.conf) to `/etc/`. The [example
@@ -390,76 +389,4 @@ TAILS ships with a very restrictive set of firewall rules. Therefore, you need t
 
 `sudo iptables -I OUTPUT 2 -p tcp -d 127.0.0.1 -m tcp --dport 18081 -j ACCEPT`
 
-`DNS_PUBLIC=tcp torsocks ./monerod --p2p-bind-ip 127.0.0.1 --no-igd --rpc-bind-ip 127.0.0.1 --data-dir /home/amnesia/Persistent/your/directory/to/the/blockchain`
-
-`./monero-wallet-cli`
-
-## Using readline
-
-While monerod and monero-wallet-cli do not use readline directly, most of the functionality can be obtained by running them via rlwrap. This allows command recall, edit capabilities, etc. It does not give autocompletion without an extra completion file, however. To use rlwrap, simply prepend `rlwrap` to the command line, eg:
-
-`rlwrap bin/monero-wallet-cli --wallet-file /path/to/wallet`
-
-Note: rlwrap will save things like your seed and private keys, if you supply them on prompt. You may want to not use rlwrap when you use simplewallet to restore from seed, etc.
-
-# Debugging
-
-This section contains general instructions for debugging failed installs or problems encountered with Monero. First ensure you are running the latest version built from the github repo.
-
-## Obtaining Stack Traces and Core Dumps on Unix Systems
-
-We generally use the tool `gdb` (GNU debugger) to provide stack trace functionality, and `ulimit` to provide core dumps in builds which crash or segfault.
-
-* To use gdb in order to obtain a stack trace for a build that has stalled:
-
-Run the build.
-
-Once it stalls, enter the following command:
-
-```
-gdb /path/to/monerod `pidof monerod` 
-```
-
-Type `thread apply all bt` within gdb in order to obtain the stack trace
-
-* If however the core dumps or segfaults:
-
-Enter `ulimit -c unlimited` on the command line to enable unlimited filesizes for core dumps
-
-Run the build.
-
-When it terminates with an output along the lines of "Segmentation fault (core dumped)", there should be a core dump file in the same directory as monerod.
-
-You can now analyse this core dump with `gdb` as follows:
-
-`gdb /path/to/monerod /path/to/dumpfile`
-
-Print the stack trace with `bt`
-
-* To run monero within gdb:
-
-Type `gdb /path/to/monerod`
-
-Pass command-line options with `--args` followed by the relevant arguments
-
-Type `run` to run monerod
-
-## Analysing Memory Corruption
-
-We use the tool `valgrind` for this.
-
-Run with `valgrind /path/to/monerod`. It will be slow.
-
-## LMDB
-
-Instructions for debugging suspected blockchain corruption as per @HYC
-
-There is an `mdb_stat` command in the LMDB source that can print statistics about the database but it's not routinely built. This can be built with the following command:
-
-`cd ~/monero/external/db_drivers/liblmdb && make`
-
-The output of `mdb_stat -ea <path to blockchain dir>` will indicate inconsistencies in the blocks, block_heights and block_info table.
-
-The output of `mdb_dump -s blocks <path to blockchain dir>` and `mdb_dump -s block_info <path to blockchain dir>` is useful for indicating whether blocks and block_info contain the same keys.
-
-These records are dumped as hex data, where the first line is the key and the second line is the data.
+`DNS_PUBLIC=tcp toro
